@@ -1,8 +1,8 @@
-# Terraform module aws-nocode-s3-static-website
+# Terraform module terraform-aws-static-website-waypoint
 
 Provisions an AWS S3 bucket configured for static website hosting, with a sample HashiCafe website.
 
-Enabled for Terraform Cloud [no-code provisioning](https://developer.hashicorp.com/terraform/cloud-docs/no-code-provisioning/module-design).
+Enabled for Terraform Cloud [no-code provisioning](https://developer.hashicorp.com/terraform/cloud-docs/no-code-provisioning/module-design) and designed for use by HCP Waypoint. The HCP Waypoint project name will be used to build the bucket name.
 
 ## Prerequisites
 
@@ -14,15 +14,15 @@ For no-code provisioning, AWS credentials must be supplied to the workspace via 
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.0, < 5.17.0 |
 | <a name="requirement_random"></a> [random](#requirement\_random) | ~> 3.4 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.17.0 |
-| <a name="provider_random"></a> [random](#provider\_random) | 3.5.1 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 5.0, < 5.17.0 |
+| <a name="provider_random"></a> [random](#provider\_random) | ~> 3.4 |
 
 ## Modules
 
@@ -49,9 +49,8 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_department"></a> [department](#input\_department) | Value for the department tag. | `string` | `"WebDev"` | no |
-| <a name="input_env"></a> [env](#input\_env) | Value for the environment tag. | `string` | n/a | yes |
-| <a name="input_prefix"></a> [prefix](#input\_prefix) | This prefix will be included in the name of most resources. | `string` | n/a | yes |
 | <a name="input_region"></a> [region](#input\_region) | The region where the resources are created. | `string` | n/a | yes |
+| <a name="input_waypoint_project"></a> [waypoint\_project](#input\_waypoint\_project) | Name of the Waypoint project. | `string` | n/a | yes |
 
 ## Outputs
 
