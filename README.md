@@ -1,4 +1,4 @@
-# Terraform module terraform-aws-static-website-waypoint
+# Terraform module for a static website provisioned by HCP Waypoint
 
 Provisions an AWS S3 bucket configured for static website hosting, with a sample HashiCafe website.
 
