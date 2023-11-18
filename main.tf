@@ -122,40 +122,15 @@ resource "aws_s3_object" "images" {
 locals {
   hashi_products = [
     {
-      name       = "Consul"
-      color      = "#dc477d"
-      image_file = "hashicafe_art_consul.png"
-    },
-    {
       name       = "HCP"
       color      = "#ffffff"
       image_file = "hashicafe_art_hcp.png"
-    },
-    {
-      name       = "Nomad"
-      color      = "#60dea9"
-      image_file = "hashicafe_art_nomad.png"
-    },
-    {
-      name       = "Packer"
-      color      = "#63d0ff"
-      image_file = "hashicafe_art_packer.png"
     },
     {
       name       = "Terraform"
       color      = "#844fba"
       image_file = "hashicafe_art_terraform.png"
     },
-    {
-      name       = "Vagrant"
-      color      = "#2e71e5"
-      image_file = "hashicafe_art_vagrant.png"
-    },
-    {
-      name       = "Vault"
-      color      = "#ffec6e"
-      image_file = "hashicafe_art_vault.png"
-    }
   ]
 
 }
