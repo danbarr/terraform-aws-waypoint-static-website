@@ -17,8 +17,9 @@ provider "aws" {
 
   default_tags {
     tags = {
-      department  = var.department
       application = "HashiCafe website"
+      managed_by  = "HCP Waypoint"
+      project     = var.waypoint_project
     }
   }
 }
