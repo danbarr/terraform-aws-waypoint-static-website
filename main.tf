@@ -25,7 +25,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "www_bucket" {
-  bucket        = "${var.waypoint_project}-static-website"
+  bucket        = "${var.waypoint_project}.${var.domain}"
   force_destroy = true
 }
 

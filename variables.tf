@@ -8,8 +8,7 @@ variable "region" {
   description = "The region where the resources are created."
 }
 
-variable "department" {
+variable "domain" {
   type        = string
-  description = "Value for the department tag."
-  default     = "WebDev"
+  description = "Route 53 hosted zone domain name."
 }
