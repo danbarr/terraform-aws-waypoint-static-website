@@ -17,14 +17,15 @@ provider "aws" {
 
   default_tags {
     tags = {
-      department  = var.department
       application = "HashiCafe website"
+      managed_by  = "HCP Waypoint"
+      project     = var.waypoint_project
     }
   }
 }
 
 resource "aws_s3_bucket" "www_bucket" {
-  bucket        = "${var.waypoint_project}-static-website"
+  bucket        = "${var.waypoint_project}.${var.domain}"
   force_destroy = true
 }
 
@@ -122,40 +123,15 @@ resource "aws_s3_object" "images" {
 locals {
   hashi_products = [
     {
-      name       = "Consul"
-      color      = "#dc477d"
-      image_file = "hashicafe_art_consul.png"
-    },
-    {
       name       = "HCP"
       color      = "#ffffff"
       image_file = "hashicafe_art_hcp.png"
-    },
-    {
-      name       = "Nomad"
-      color      = "#60dea9"
-      image_file = "hashicafe_art_nomad.png"
-    },
-    {
-      name       = "Packer"
-      color      = "#63d0ff"
-      image_file = "hashicafe_art_packer.png"
     },
     {
       name       = "Terraform"
       color      = "#844fba"
       image_file = "hashicafe_art_terraform.png"
     },
-    {
-      name       = "Vagrant"
-      color      = "#2e71e5"
-      image_file = "hashicafe_art_vagrant.png"
-    },
-    {
-      name       = "Vault"
-      color      = "#ffec6e"
-      image_file = "hashicafe_art_vault.png"
-    }
   ]
 
 }

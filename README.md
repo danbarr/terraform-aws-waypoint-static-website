@@ -48,7 +48,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_department"></a> [department](#input\_department) | Value for the department tag. | `string` | `"WebDev"` | no |
+| <a name="input_domain"></a> [domain](#input\_domain) | Route 53 hosted zone domain name. | `string` | n/a | yes |
 | <a name="input_region"></a> [region](#input\_region) | The region where the resources are created. | `string` | n/a | yes |
 | <a name="input_waypoint_project"></a> [waypoint\_project](#input\_waypoint\_project) | Name of the Waypoint project. | `string` | n/a | yes |
 
@@ -56,6 +56,7 @@ No modules.
 
 | Name | Description |
 |------|-------------|
+| <a name="output_bucket_name"></a> [bucket\_name](#output\_bucket\_name) | Name of the S3 bucket. |
 | <a name="output_endpoint"></a> [endpoint](#output\_endpoint) | URL endpoint of the website. |
 | <a name="output_product"></a> [product](#output\_product) | The product which was randomly selected. |
 <!-- END_TF_DOCS -->
