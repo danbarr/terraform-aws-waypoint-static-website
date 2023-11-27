@@ -1,6 +1,6 @@
-variable "waypoint_project" {
+variable "waypoint_application" {
   type        = string
-  description = "Name of the Waypoint project."
+  description = "Name of the Waypoint application."
 }
 
 variable "region" {
