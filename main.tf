@@ -19,13 +19,13 @@ provider "aws" {
     tags = {
       application = "HashiCafe website"
       managed_by  = "HCP Waypoint"
-      project     = var.waypoint_project
+      application     = var.waypoint_application
     }
   }
 }
 
 resource "aws_s3_bucket" "www_bucket" {
-  bucket        = "${var.waypoint_project}.${var.domain}"
+  bucket        = "${var.waypoint_application}.${var.domain}"
   force_destroy = true
 }
 
