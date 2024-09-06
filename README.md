@@ -24,10 +24,6 @@ For no-code provisioning, AWS credentials must be supplied to the workspace via 
 | <a name="provider_aws"></a> [aws](#provider\_aws) | >= 5.0, < 5.17.0 |
 | <a name="provider_random"></a> [random](#provider\_random) | ~> 3.4 |
 
-## Modules
-
-No modules.
-
 ## Resources
 
 | Name | Type |
@@ -50,7 +46,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_domain"></a> [domain](#input\_domain) | Route 53 hosted zone domain name. | `string` | n/a | yes |
 | <a name="input_region"></a> [region](#input\_region) | The region where the resources are created. | `string` | n/a | yes |
-| <a name="input_waypoint_project"></a> [waypoint\_project](#input\_waypoint\_project) | Name of the Waypoint project. | `string` | n/a | yes |
+| <a name="input_waypoint_application"></a> [waypoint\_application](#input\_waypoint\_application) | Name of the Waypoint application. | `string` | n/a | yes |
 
 ## Outputs
 
